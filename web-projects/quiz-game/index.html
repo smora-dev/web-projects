@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conocimiento General</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body onload="comenzarCuentaRegresiva()">
+    <h1 id="cuentaRegresiva">30</h1>
+    <h2>Conteste de manera correcta las preguntas que se le van a realizar, en un tiempo de 30 segundos</h2>
+    <p>1.¿Qué instrumento musical tiene teclas blancas y negras?</p>
+    <input type="text" id="Respuesta1">
+    <p>2.¿Qué planeta es conocido como el “planeta rojo”?</p>
+    <input type="text" id="Respuesta2">
+    <p>3.¿Qué líquido llamamos “oro negro”?</p>
+    <input type="text" id="Respuesta3">
+    <p>4.¿El chocolate es salado?</p>
+    <input type="text" id="Respuesta4">
+    <p>5.¿Quién es el mejor portero de Costa Rica?</p>
+    <input type="text" id="Respuesta5">
+    <button onclick="finalizarJuego()">Finalizar Juego</button>
+
+    <audio id="audioAlarma">
+        <source src="alarma.mp3" type="audio/mpeg">
+        Sonido no habilitado 
+    </audio>
+
+    <script>
+        let elementoSonidoAlarma = document.getElementById("audioAlarma");
+        let cuentaRegresivaElemento = document.getElementById("cuentaRegresiva");
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+
+        function comenzarCuentaRegresiva() {
+            let tiempoRestante = 30;
+            actualizarCuentaRegresiva(tiempoRestante);
+
+            tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+            intervaloDeTiempo = setInterval(ticTac, 1000);
+
+            function ticTac() {
+                if (tiempoRestante > 0) {
+                    tiempoRestante--;
+                    actualizarCuentaRegresiva(tiempoRestante);
+                } else {
+                    clearInterval(intervaloDeTiempo);
+                    tiempoCumplido();
+                }
+            }
+        }
+
+        function actualizarCuentaRegresiva(tiempo) {
+            cuentaRegresivaElemento.textContent = tiempo;
+        }
+
+        function tiempoCumplido() {
+            elementoSonidoAlarma.play();
+            alert("¡Game Over!");
+        }
+
+        function finalizarJuego() {
+            clearTimeout(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+
+            let respuesta1 = document.getElementById("Respuesta1").value;
+            let respuesta2 = document.getElementById("Respuesta2").value;
+            let respuesta3 = document.getElementById("Respuesta3").value;
+            let respuesta4 = document.getElementById("Respuesta4").value;
+            let respuesta5 = document.getElementById("Respuesta5").value;
+
+            let fechaActual = new Date();
+            let dia = String(fechaActual.getDate()).padStart(2, '0');
+            let mes = String(fechaActual.getMonth() + 1).padStart(2, '0'); // Los meses van de 0-11
+            let año = fechaActual.getFullYear();
+            let fecha = dia + '/' + mes + '/' + año;
+
+            let mensaje = "Fecha: " + fecha + "\n" +
+                          "Respuesta 1: " + respuesta1 + "\n" +
+                          "Respuesta 2: " + respuesta2 + "\n" +
+                          "Respuesta 3: " + respuesta3 + "\n" +
+                          "Respuesta 4: " + respuesta4 + "\n" +
+                          "Respuesta 5: " + respuesta5;
+
+            alert(mensaje);
+        }
+    </script>
+</body>
+</html>

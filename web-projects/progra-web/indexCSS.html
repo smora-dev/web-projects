@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Explicación</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .list-group-item i {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="fs-1 text-center" data-aos="fade-up">¿Qué es CSS?</h1>
+        <p class="fs-4 text-center" data-aos="fade-up">CSS (Cascading Style Sheets) es un lenguaje de diseño utilizado para describir la presentación de un documento escrito en HTML o XML. CSS maneja el aspecto visual y el diseño de las páginas web, incluyendo colores, fuentes, y la disposición de los elementos en la página.</p>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <h2 class="card-title fs-3">Componentes Principales de CSS</h2>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fas fa-code"></i> Selectores: Permiten seleccionar los elementos HTML que se quieren estilizar. Los selectores pueden ser de tipo, clase, ID, o combinaciones complejas.</li>
+              <li class="list-group-item"><i class="fas fa-paint-brush"></i> Propiedades: Definen los aspectos específicos de estilo que se aplicarán a los elementos seleccionados. Ejemplos incluyen color, font-size, margin, padding, etc.</li>
+              <li class="list-group-item"><i class="fas fa-sliders-h"></i> Valores: Especifican las configuraciones para las propiedades. Por ejemplo, la propiedad color puede tener valores como red, #ff0000, rgb(255,0,0), etc.</li>
+              <li class="list-group-item"><i class="fas fa-cogs"></i> Reglas: Conjunto de selectores, propiedades y valores que definen cómo se debe estilizar un elemento HTML.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <h2 class="card-title fs-3">Funciones del CSS</h2>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fas fa-font"></i> Estilizar Texto: Permite cambiar el color, la fuente, el tamaño, y otros aspectos del texto en una página web.</li>
+              <li class="list-group-item"><i class="fas fa-th-large"></i> Diseño de Páginas: Controla la disposición de los elementos en una página web usando modelos de diseño como Flexbox y Grid.</li>
+              <li class="list-group-item"><i class="fas fa-mobile-alt"></i> Responsividad: Facilita la creación de diseños que se adaptan a diferentes tamaños de pantalla y dispositivos.</li>
+              <li class="list-group-item"><i class="fas fa-film"></i> Animaciones: Permite crear transiciones y animaciones para mejorar la interacción y el diseño visual.</li>
+              <li class="list-group-item"><i class="fas fa-palette"></i> Tematización: Ayuda a aplicar temas consistentes a una aplicación o sitio web, mejorando la cohesión visual.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <h2 class="card-title fs-3">Tecnologías Comunes en el CSS</h2>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fas fa-code-branch"></i> Preprocesadores: Sass, Less y Stylus son herramientas que extienden las capacidades de CSS, permitiendo el uso de variables, anidamiento y funciones.</li>
+              <li class="list-group-item"><i class="fas fa-layer-group"></i> Frameworks: Bootstrap, Foundation y Bulma son colecciones de estilos CSS predefinidos que facilitan la creación de diseños responsivos y consistentes.</li>
+              <li class="list-group-item"><i class="fas fa-cubes"></i> Metodologías: BEM (Block Element Modifier), SMACSS (Scalable and Modular Architecture for CSS) y OOCSS (Object-Oriented CSS) son enfoques para escribir CSS mantenible y escalable.</li>
+              <li class="list-group-item"><i class="fas fa-tools"></i> Herramientas de Desarrollo: Herramientas como PostCSS y Autoprefixer ayudan a manejar compatibilidad entre navegadores y automatizar tareas comunes en el desarrollo de CSS.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <h2 class="card-title fs-3">Ejemplo de Flujo de Trabajo en CSS</h2>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fas fa-file-alt"></i> Creación del HTML: Escribir el contenido y la estructura de la página usando HTML.</li>
+              <li class="list-group-item"><i class="fas fa-file-code"></i> Aplicación de Estilos Básicos: Definir los estilos básicos en un archivo CSS, incluyendo colores, fuentes y diseño general.</li>
+              <li class="list-group-item"><i class="fas fa-paint-brush"></i> Refinamiento del Diseño: Usar CSS avanzado para mejorar el diseño, incluyendo animaciones, transiciones y diseño responsivo.</li>
+              <li class="list-group-item"><i class="fas fa-mobile-alt"></i> Pruebas en Diferentes Dispositivos: Asegurar que el diseño se vea y funcione bien en diferentes tamaños de pantalla y dispositivos.</li>
+              <li class="list-group-item"><i class="fas fa-tasks"></i> Optimización y Mantenimiento: Minimizar el archivo CSS y usar herramientas para mantener el código limpio y eficiente.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <h2 class="card-title fs-3">Seguridad en el CSS</h2>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fas fa-lock"></i> Cifrado de Datos: Asegurar que los datos sensibles se cifren tanto en tránsito como en reposo.</li>
+              <li class="list-group-item"><i class="fas fa-user-check"></i> Autenticación y Autorización: Implementar mecanismos sólidos para verificar la identidad de los usuarios y determinar sus permisos.</li>
+              <li class="list-group-item"><i class="fas fa-shield-alt"></i> Protección contra Ataques: Defenderse contra ataques comunes como inyecciones SQL, cross-site scripting (XSS), y ataques de denegación de servicio (DDoS).</li>
+              <li class="list-group-item"><i class="fas fa-search"></i> Monitoreo y Registro: Mantener registros de todas las actividades y monitorear el sistema para detectar comportamientos anómalos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <img src="img/Backend02.jpg" class="img-fluid my-4" alt="imagen de CSS">
+      <div class="container mt-5">
+        <a class="btn btn-dark" href="index.html" role="button">HOME</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

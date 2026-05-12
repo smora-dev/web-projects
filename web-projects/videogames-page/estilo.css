@@ -1,0 +1,25 @@
+h1{
+    font-family:'Times New Roman', Times, serif;
+    color: red;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+
+p{
+    color: rgb(0, 38, 255);
+    border: 1px;
+    border-style: solid;
+    
+}
+
+.texto{
+    background-color: rgba(10, 214, 250, 0.712);
+}
+
+.estilo{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
